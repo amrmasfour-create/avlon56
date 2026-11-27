@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أفلون لشاشات السيارات — شاشات Android خارجية لسيارتك — اختر، شاهد الفرق، واطلب التركيب</title>
+<meta name="description" content="شاشات Android خارجية لسيارتك — اختر، شاهد الفرق، واطلب التركيب">
+
+<link rel="canonical" href="https://avlon.example/ar/">
+<link rel="alternate" hreflang="ar" href="https://avlon.example/ar/">
+<link rel="alternate" hreflang="en" href="https://avlon.example/en/">
+<link rel="alternate" hreflang="x-default" href="https://avlon.example/ar/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="أفلون لشاشات السيارات — شاشات Android خارجية لسيارتك — اختر، شاهد الفرق، واطلب التركيب">
+<meta property="og:description" content="شاشات Android خارجية لسيارتك — اختر، شاهد الفرق، واطلب التركيب">
+<meta property="og:url" content="https://avlon.example/ar/">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:image" content="https://avlon.example/img/hero.svg">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOSIgZmlsbD0iIzBiMTIyMCIvPjxyZWN0IHg9IjYiIHk9IjEwIiB3aWR0aD0iMjgiIGhlaWdodD0iMTgiIHJ4PSIzIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTExIDI0bDUtNiA0IDQgMy0zIDQgNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTBiNmYwIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" type="image/svg+xml">
+<style>:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --ink: #0e1726;
+  --muted: #5b6678;
+  --line: #e3e8ef;
+  --night: #0b1220;
+  --night-2: #131d31;
+  --accent: #10b6f0;
+  --accent-ink: #04212e;
+  --accent-soft: #e3f6fd;
+  --ok: #138a52;
+  --ok-soft: #e4f6ec;
+  --warn: #b36a00;
+  --warn-soft: #fff3df;
+  --bad: #c2332f;
+  --bad-soft: #fde8e7;
+  --wa: #1fa855;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(14, 23, 38, .06), 0 8px 24px rgba(14, 23, 38, .06);
+  --font: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", Tahoma, system-ui, -apple-system, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.65; font-size: 16px; }
+img, video, iframe { max-width: 100%; display: block; }
+img { height: auto; }
+a { color: #0a7fb0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3, .h3, .h4, .h5, .h6 { line-height: 1.3; margin: 0 0 .6em; font-weight: 700; }
+h1 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); letter-spacing: -.01em; }
+h2 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); }
+.h3 { font-size: 1.5rem; } .h4 { font-size: 1.25rem; } .h5 { font-size: 1.08rem; } .h6 { font-size: .95rem; text-transform: none; }
+p { margin: 0 0 1em; }
+.muted { color: var(--muted); }
+.small { font-size: .86rem; }
+.lead { font-size: 1.15rem; }
+.center { text-align: center; }
+.sr, .hp { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; inset-inline-start: -999px; top: 8px; background: #fff; padding: 8px 12px; z-index: 100; }
+.skip:focus { inset-inline-start: 8px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+.page { padding-block: 24px 64px; }
+.narrow { width: min(820px, 100% - 32px); }
+.section { padding-block: 56px; }
+.section-alt { background: var(--surface); border-block: 1px solid var(--line); }
+.section-tight { margin-top: 40px; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.section-head h2 { margin: 0; }
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+
+.demo-bar { background: #fff3df; color: #6b4300; text-align: center; font-size: .85rem; padding: 6px 12px; border-bottom: 1px solid #f2d9a8; }
+
+/* header */
+.site-header { background: var(--night); color: #fff; position: sticky; top: 0; z-index: 40; border-bottom: 1px solid rgba(255,255,255,.06); }
+.header-row { display: flex; align-items: center; gap: 24px; min-height: 68px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-weight: 800; font-size: 1.1rem; }
+.logo:hover { text-decoration: none; }
+.logo-mark { width: 36px; height: 36px; color: #fff; }
+.site-footer .logo-mark { color: var(--ink); }
+.main-nav { display: flex; align-items: center; gap: 20px; flex: 1; justify-content: space-between; }
+.main-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.main-nav a { color: #c9d3e3; padding: 8px 10px; border-radius: 8px; font-size: .95rem; }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.08); text-decoration: none; }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-actions .lang-switch { border: 1px solid rgba(255,255,255,.2); }
+.nav-actions .btn { color: var(--accent-ink); }
+.nav-toggle { display: none; margin-inline-start: auto; background: none; border: 0; width: 44px; height: 44px; padding: 10px; cursor: pointer; }
+.nav-toggle span:not(.sr) { display: block; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; }
+@media (max-width: 980px) {
+  .nav-toggle { display: block; }
+  .main-nav { display: none; position: absolute; inset-inline: 0; top: 100%; background: var(--night-2); flex-direction: column; align-items: stretch; padding: 12px 16px 20px; }
+  .main-nav.open { display: flex; }
+  .main-nav ul { flex-direction: column; }
+  .main-nav a { display: block; padding: 12px; }
+  .nav-actions { justify-content: space-between; }
+}
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 20px; border-radius: 10px; border: 1px solid transparent; font: inherit; font-weight: 700; cursor: pointer; line-height: 1.2; text-decoration: none !important; transition: transform .08s, background .15s, box-shadow .15s; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: 0 4px 14px rgba(16,182,240,.3); }
+.btn-primary:hover { background: #2cc3f5; }
+.btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn-ghost:hover { background: var(--accent-soft); }
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-wa:hover { background: #18934a; }
+.btn-sm { padding: 8px 14px; font-size: .9rem; }
+.btn-lg { padding: 14px 28px; font-size: 1.05rem; }
+.btn[disabled] { opacity: .6; cursor: progress; }
+.row-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+
+/* hero */
+.hero { background: radial-gradient(1200px 500px at 80% -10%, rgba(16,182,240,.28), transparent 60%), linear-gradient(180deg, var(--night), #101a2e); color: #fff; padding-top: 48px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+.hero h1 { color: #fff; }
+.hero .lead { color: #c3cee0; }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; color: var(--accent); font-weight: 700; margin-bottom: .5em; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-media { border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.4); }
+.finder-card { background: var(--surface); color: var(--ink); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); position: relative; top: 48px; margin-top: -8px; border: 1px solid var(--line); }
+.hero + .section { padding-top: 104px; }
+.finder-card.finder-inline { top: 0; margin: 16px 0 32px; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.finder { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 12px; align-items: end; }
+.finder label span { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 4px; color: var(--muted); }
+@media (max-width: 760px) { .finder { grid-template-columns: 1fr; } }
+
+/* forms */
+select, .input { width: 100%; font: inherit; padding: 11px 12px; border: 1px solid #cfd7e3; border-radius: 10px; background: #fff; color: var(--ink); min-height: 46px; }
+select:disabled { background: #f1f4f8; color: #98a2b3; }
+textarea.input { resize: vertical; min-height: 90px; }
+.input:focus, select:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px rgba(16,182,240,.2); }
+.filter-input { max-width: 360px; margin-bottom: 20px; }
+label.check { display: flex; align-items: center; gap: 8px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-grid label > span { display: block; font-weight: 600; font-size: .92rem; margin-bottom: 4px; }
+.span-2 { grid-column: 1 / -1; }
+fieldset { border: 0; padding: 0; margin: 0; }
+legend { font-weight: 600; font-size: .92rem; margin-bottom: 6px; }
+.radios { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.radio { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; cursor: pointer; background: #fff; }
+.radio:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.err { color: var(--bad); font-size: .82rem; font-style: normal; display: block; min-height: 0; }
+.invalid .input, .invalid select { border-color: var(--bad); }
+.form-msg { background: var(--bad-soft); color: var(--bad); padding: 10px 14px; border-radius: 10px; }
+.pre-car { display: flex; gap: 14px; align-items: center; background: var(--bg); border-radius: 12px; padding: 10px; margin-bottom: 18px; }
+.pre-car .media { width: 160px; flex: none; }
+.order-ok { text-align: center; padding: 24px; }
+.order-ok .h3 { color: var(--ok); }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; align-items: start; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* media + badges */
+.media { position: relative; margin: 0; background: #e9eef5; border-radius: 12px; overflow: hidden; }
+.media img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.badge-illus { position: absolute; inset-block-start: 10px; inset-inline-start: 10px; background: rgba(11,18,32,.82); color: #fff; font-size: .74rem; padding: 3px 9px; border-radius: 999px; font-weight: 600; letter-spacing: .01em; pointer-events: none; z-index: 3; }
+
+/* cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); color: inherit; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+a.card:hover, .card:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 14px 34px rgba(14,23,38,.1); }
+.card .media { border-radius: 0; }
+.card-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card-body h3, .card-body h2 { margin: 0; }
+.card-body h3 a, .card-body h2 a { color: inherit; }
+.card-body p { margin: 0; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 4px 0; }
+.chips li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: .8rem; }
+.tag { display: inline-block; font-size: .78rem; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); font-weight: 600; width: fit-content; }
+.tag-offer { background: #fff1d6; border-color: #f3d08b; color: #7a4c00; }
+.price strong { font-size: 1.15rem; }
+.price del { color: var(--muted); font-size: .9rem; margin-inline-start: 6px; }
+.link { color: #0a7fb0; font-weight: 600; }
+
+/* brands */
+.brand-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.brand-tile { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 18px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: inherit; text-align: center; transition: border-color .15s, transform .15s; }
+.brand-tile:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
+.brand-initial { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--night); color: var(--accent); font-weight: 800; font-size: 1.3rem; font-family: system-ui, sans-serif; }
+.model-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.model-list a { display: flex; justify-content: space-between; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; color: inherit; }
+.model-list a:hover { border-color: var(--accent); text-decoration: none; }
+
+/* breadcrumbs */
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 16px; font-size: .88rem; color: var(--muted); }
+.crumbs li + li::before { content: "›"; margin-inline-end: 6px; color: #a0aabb; }
+[dir="rtl"] .crumbs li + li::before { content: "‹"; }
+
+/* before/after slider */
+.ba { position: relative; border-radius: 16px; overflow: hidden; background: #0b1220; user-select: none; touch-action: pan-y; --pos: 50%; }
+.ba-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.ba-before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 12px rgba(0,0,0,.4); pointer-events: none; z-index: 2; }
+.ba-handle::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--night); display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; z-index: 4; }
+.ba-label { position: absolute; bottom: 12px; background: rgba(11,18,32,.75); color: #fff; padding: 3px 12px; border-radius: 999px; font-size: .8rem; font-weight: 700; z-index: 2; pointer-events: none; }
+.ba-label-l { left: 12px; } .ba-label-r { right: 12px; }
+.ba .badge-illus { left: 12px; right: auto; }
+.ba:has(.ba-range:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.ba-caption { margin-top: 8px; font-size: .9rem; }
+
+/* car page */
+.car-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; }
+.car-head h1 .years { color: var(--muted); font-weight: 600; font-size: .7em; }
+@media (max-width: 860px) { .car-head { grid-template-columns: 1fr; } }
+.kv { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin: 16px 0; }
+.kv > div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+.kv dt { font-size: .78rem; color: var(--muted); }
+.kv dd { margin: 0; font-weight: 600; }
+.kv-col { grid-template-columns: 1fr; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.status-compatible { background: var(--ok-soft); color: var(--ok); }
+.status-modified { background: var(--warn-soft); color: var(--warn); }
+.status-incompatible { background: var(--bad-soft); color: var(--bad); }
+.compat-list { display: grid; gap: 16px; }
+.ccard { display: grid; grid-template-columns: 260px 1fr; gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); border-inline-start: 4px solid var(--ok); }
+.ccard-modified { border-inline-start-color: var(--warn); }
+.ccard-incompatible { border-inline-start-color: var(--bad); opacity: .85; }
+.ccard-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 4px; }
+.ccard h3 { margin: 4px 0; }
+.ccard h3 a { color: inherit; }
+.ccard-prices { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; margin: 6px 0; }
+@media (max-width: 680px) { .ccard { grid-template-columns: 1fr; } }
+details > summary { cursor: pointer; font-weight: 600; }
+.compat-details { margin-top: 8px; }
+.compat-details summary { color: #0a7fb0; font-size: .92rem; }
+.incompatible { margin-top: 20px; }
+.incompatible > summary { padding: 10px 0; color: var(--bad); }
+.spec { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: .93rem; }
+.spec th, .spec td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.spec th { width: 40%; color: var(--muted); font-weight: 600; }
+.thumbs { margin-top: 12px; }
+.thumb { position: relative; color: inherit; }
+.thumb .cap { display: block; font-size: .85rem; margin-top: 6px; }
+.video { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 14px; background: #000; }
+.video iframe { width: 100%; height: 100%; border: 0; border-radius: 14px; }
+
+/* catalog */
+.catalog { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
+.filters { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: grid; gap: 12px; position: sticky; top: 84px; }
+.filters label > span { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 3px; }
+@media (max-width: 860px) { .catalog { grid-template-columns: 1fr; } .filters { position: static; } }
+.product { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; }
+.product-price { margin: 8px 0 16px; }
+.product-price strong { font-size: 1.6rem; }
+@media (max-width: 860px) { .product { grid-template-columns: 1fr; } }
+.car-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.car-list li { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.car-list a { color: inherit; }
+.pager { display: flex; gap: 16px; align-items: center; justify-content: center; margin-top: 28px; }
+.pager a { padding: 8px 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+
+/* misc */
+.empty { background: var(--surface); border: 1px dashed #c6d0de; border-radius: var(--radius); padding: 28px; text-align: center; }
+.features .feature { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.feature-num { color: var(--accent); font-weight: 800; font-size: 1.4rem; display: block; margin-bottom: 6px; font-family: system-ui, sans-serif; }
+.steps { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.steps li { flex: 1 1 200px; display: flex; align-items: center; gap: 12px; background: var(--night); color: #fff; padding: 14px 18px; border-radius: 12px; font-weight: 600; }
+.steps strong { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); flex: none; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+.faq details p { margin: 10px 0 0; }
+.prose p { font-size: 1.05rem; }
+.gallery figcaption { font-size: .88rem; margin-top: 8px; }
+.gitem { margin: 0; }
+
+/* footer */
+.site-footer { background: var(--surface); border-top: 1px solid var(--line); padding-top: 40px; margin-top: 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+.footer-grid .links { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.footer-grid .links a { color: var(--muted); }
+.copy { padding: 20px 0 90px; font-size: .85rem; border-top: 1px solid var(--line); margin-top: 32px; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; } }
+.wa-float { position: fixed; inset-inline-end: 18px; bottom: 18px; z-index: 50; background: var(--wa); color: #fff; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; font-weight: 700; box-shadow: 0 8px 24px rgba(31,168,85,.45); }
+.wa-float:hover { text-decoration: none; background: #18934a; }
+
+/* lightbox */
+.lb { position: fixed; inset: 0; background: rgba(5,10,20,.92); display: grid; place-items: center; z-index: 100; padding: 24px; cursor: zoom-out; }
+.lb img { max-height: 90vh; width: auto; border-radius: 10px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<style>.preview-bar{background:#0b1220;color:#9fe3fb;text-align:center;font-size:.85rem;padding:7px 12px}.filters{display:none}.catalog{grid-template-columns:1fr}</style></head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<div class="demo-bar">نسخة عرض: السيارات والشاشات والأسعار الحالية بيانات تجريبية.</div>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="ar/index.html"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="8" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 24l6-8 5 6 4-4 5 6" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>أفلون لشاشات السيارات</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr">القائمة</span></button>
+    <nav id="main-nav" class="main-nav" aria-label="القائمة">
+      <ul><li><a href="ar/index.html" aria-current="page">الرئيسية</a></li><li><a href="ar/brands.html" >ماركات السيارات</a></li><li><a href="ar/find.html" >ابحث عن شاشتك</a></li><li><a href="ar/screens.html" >أنواع الشاشات</a></li><li><a href="ar/gallery.html" >معرض التركيبات</a></li><li><a href="ar/about.html" >من نحن</a></li><li><a href="ar/contact.html" >اتصل بنا</a></li></ul>
+      <div class="nav-actions">
+        <a class="lang-switch" href="en/index.html" hreflang="en" lang="en">English</a>
+        <a class="btn btn-primary btn-sm" href="ar/order.html">اطلب التركيب</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="preview-bar">معاينة ثابتة للموقع: إرسال الطلبات وفلاتر الكتالوج ولوحة التحكم تعمل عند تشغيل الخادم (npm start).</div><main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Android · CarPlay · Android Auto</p>
+        <h1>شاشات Android خارجية لسيارتك — اختر، شاهد الفرق، واطلب التركيب</h1>
+        <p class="lead">نختص بالشاشات الخارجية التي تُركّب بعد تصنيع السيارة، ولا نبيع الشاشات الأصلية من المصنع.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#finder">ابحث عن شاشتك</a>
+          
+        </div>
+      </div>
+      <figure class="media hero-media">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjYwIDE0MCAxMDgwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIj4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="تابلوه سيارة مزود بشاشة Android خارجية" loading="eager" width="1200" height="750" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    </div>
+    <div class="wrap finder-card" id="finder">
+      <h2 class="h4">ابحث عن شاشتك</h2>
+      <p class="muted">اختر سيارتك لنعرض لك الشاشات المتوافقة فعلياً</p>
+      <form class="finder " action="find.html" method="get" data-finder-static>
+    <label><span>الماركة</span>
+      <select name="brand" required data-f="brand">
+        <option value="">اختر الماركة</option>
+        <option value="toyota" >تويوتا</option><option value="hyundai" >هيونداي</option><option value="kia" >كيا</option><option value="nissan" >نيسان</option><option value="chevrolet" >شفروليه</option><option value="mitsubishi" >ميتسوبيشي</option><option value="mercedes-benz" >مرسيدس</option><option value="bmw" >بي إم دبليو</option><option value="renault" >رينو</option><option value="honda" >هوندا</option><option value="mazda" >مازدا</option><option value="suzuki" >سوزوكي</option><option value="volkswagen" >فولكس فاجن</option><option value="skoda" >سكودا</option><option value="peugeot" >بيجو</option><option value="ford" >فورد</option><option value="jeep" >جيب</option><option value="gmc" >جي إم سي</option><option value="lexus" >لكزس</option><option value="mg" >إم جي</option><option value="chery" >شيري</option><option value="geely" >جيلي</option><option value="changan" >شانجان</option><option value="byd" >بي واي دي</option><option value="isuzu" >إيسوزو</option>
+      </select></label>
+    <label><span>الموديل</span>
+      <select name="model" data-f="model" disabled>
+        <option value="">اختر الموديل</option>
+        
+      </select></label>
+    <label><span>سنة الصنع</span>
+      <select name="year" data-f="year" disabled>
+        <option value="">اختر السنة</option>
+        
+      </select></label>
+    <button class="btn btn-primary" type="submit">ابحث</button>
+  </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>أشهر الماركات</h2><a href="ar/brands.html">عرض الكل</a></div>
+      <ul class="brand-grid">
+        <li><a class="brand-tile" href="ar/brands/toyota.html">
+          <span class="brand-initial" aria-hidden="true">T</span>
+          <strong>تويوتا</strong><small class="muted">8 موديل</small></a></li><li><a class="brand-tile" href="ar/brands/hyundai.html">
+          <span class="brand-initial" aria-hidden="true">H</span>
+          <strong>هيونداي</strong><small class="muted">6 موديل</small></a></li><li><a class="brand-tile" href="ar/brands/kia.html">
+          <span class="brand-initial" aria-hidden="true">K</span>
+          <strong>كيا</strong><small class="muted">6 موديل</small></a></li><li><a class="brand-tile" href="ar/brands/nissan.html">
+          <span class="brand-initial" aria-hidden="true">N</span>
+          <strong>نيسان</strong><small class="muted">6 موديل</small></a></li><li><a class="brand-tile" href="ar/brands/chevrolet.html">
+          <span class="brand-initial" aria-hidden="true">C</span>
+          <strong>شفروليه</strong><small class="muted">5 موديل</small></a></li><li><a class="brand-tile" href="ar/brands/mg.html">
+          <span class="brand-initial" aria-hidden="true">M</span>
+          <strong>إم جي</strong><small class="muted">4 موديل</small></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head"><h2>سيارات مطلوبة</h2><a href="ar/brands.html">عرض الكل</a></div>
+      <div class="grid grid-4"><a class="card vcard" href="ar/car/hyundai-elantra-2016-2020-standard-trim.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="هيونداي إلنترا 2016–2020" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">هيونداي إلنترا</h3>
+      <p class="muted">2016–2020 · الفئة القياسية</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/toyota-camry-2018-2024-standard-trim.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="تويوتا كامري 2018–2024" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">تويوتا كامري</h3>
+      <p class="muted">2018–2024 · الفئة القياسية</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/nissan-patrol-2010-2019-le-se.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="نيسان باترول 2010–2019" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">نيسان باترول</h3>
+      <p class="muted">2010–2019 · LE / SE</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/nissan-sunny-2012-2019-all-trims.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="نيسان صني 2012–2019" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">نيسان صني</h3>
+      <p class="muted">2012–2019 · جميع الفئات</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/kia-sportage-2016-2021-all-trims.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="كيا سبورتاج 2016–2021" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">كيا سبورتاج</h3>
+      <p class="muted">2016–2021 · جميع الفئات</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/hyundai-accent-2018-2022-all-trims.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="هيونداي أكسنت 2018–2022" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">هيونداي أكسنت</h3>
+      <p class="muted">2018–2022 · جميع الفئات</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/toyota-land-cruiser-2016-2021-gx-exr.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="تويوتا لاندكروزر 2016–2021" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">تويوتا لاندكروزر</h3>
+      <p class="muted">2016–2021 · GX / EXR</p>
+    </div>
+  </a><a class="card vcard" href="ar/car/toyota-corolla-2014-2018-all-trims.html">
+    <figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="تويوتا كورولا 2014–2018" loading="lazy" width="640" height="360" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure>
+    <div class="card-body">
+      <h3 class="h5">تويوتا كورولا</h3>
+      <p class="muted">2014–2018 · جميع الفئات</p>
+    </div>
+  </a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>أحدث الشاشات</h2><a href="ar/screens.html">عرض الكل</a></div>
+      <div class="grid grid-3"><article class="card scard">
+    <a href="ar/screens/av-13-ultra.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-13 ألترا" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      
+      <h3 class="h5"><a href="ar/screens/av-13-ultra.html">شاشة AV-13 ألترا</a></h3>
+      <ul class="chips">
+        <li>13.1″</li><li>8/256 GB</li><li>Android 13</li>
+        <li>CarPlay لاسلكي</li>
+        <li>DSP</li>
+      </ul>
+      <div class="card-foot"><span class="price"><strong>2,400 ر.س</strong></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-13-ultra.html">التفاصيل</a></div>
+    </div>
+  </article><article class="card scard">
+    <a href="ar/screens/av-10-max.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-10 ماكس" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      
+      <h3 class="h5"><a href="ar/screens/av-10-max.html">شاشة AV-10 ماكس</a></h3>
+      <ul class="chips">
+        <li>10.1″</li><li>8/128 GB</li><li>Android 13</li>
+        <li>CarPlay لاسلكي</li>
+        <li>DSP</li>
+      </ul>
+      <div class="card-foot"><span class="price"><strong>1,890 ر.س</strong></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-10-max.html">التفاصيل</a></div>
+    </div>
+  </article><article class="card scard">
+    <a href="ar/screens/av-10-pro.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-10 برو" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      <span class="tag tag-offer">خصم لفترة محدودة</span>
+      <h3 class="h5"><a href="ar/screens/av-10-pro.html">شاشة AV-10 برو</a></h3>
+      <ul class="chips">
+        <li>10.1″</li><li>4/64 GB</li><li>Android 13</li>
+        <li>CarPlay لاسلكي</li>
+        <li>DSP</li>
+      </ul>
+      <div class="card-foot"><span class="price"><strong>1,049 ر.س</strong> <del>1,150 ر.س</del></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-10-pro.html">التفاصيل</a></div>
+    </div>
+  </article><article class="card scard">
+    <a href="ar/screens/av-9-pro.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-9 برو" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      
+      <h3 class="h5"><a href="ar/screens/av-9-pro.html">شاشة AV-9 برو</a></h3>
+      <ul class="chips">
+        <li>9″</li><li>4/64 GB</li><li>Android 13</li>
+        <li>CarPlay لاسلكي</li>
+        <li>DSP</li>
+      </ul>
+      <div class="card-foot"><span class="price"><strong>990 ر.س</strong></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-9-pro.html">التفاصيل</a></div>
+    </div>
+  </article><article class="card scard">
+    <a href="ar/screens/av-9-lite.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-9 لايت" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      <span class="tag tag-offer">خصم لفترة محدودة</span>
+      <h3 class="h5"><a href="ar/screens/av-9-lite.html">شاشة AV-9 لايت</a></h3>
+      <ul class="chips">
+        <li>9″</li><li>2/32 GB</li><li>Android 13</li>
+        <li>CarPlay سلكي</li>
+        
+      </ul>
+      <div class="card-foot"><span class="price"><strong>599 ر.س</strong> <del>650 ر.س</del></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-9-lite.html">التفاصيل</a></div>
+    </div>
+  </article><article class="card scard">
+    <a href="ar/screens/av-7-double-din.html"><figure class="media ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1Ij4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VhZjFmOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q0ZTBlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MjUiIGZpbGw9InVybCgjYmcpIi8+CjxlbGxpcHNlIGN4PSI1MDAiIGN5PSI1NDAiIHJ4PSIzNjAiIHJ5PSIyMiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjE1Ii8+CjxyZWN0IHg9IjE3MCIgeT0iMTEwIiB3aWR0aD0iNjYwIiBoZWlnaHQ9IjQxMCIgcng9IjI2IiBmaWxsPSIjMGEwYzEwIi8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNjA4IiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjMGQxNzI2Ii8+CjxyZWN0IHg9IjE5NiIgeT0iMTM0IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM2MiIgcng9IjEyIiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik0xOTYgMzgwIEMgMzAwIDMyMCwgMzYwIDQyMCwgNDYwIDM2MCBTIDU4MCAzMDAsIDYxNiAzMjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTk2IDM4MCBDIDMwMCAzMjAsIDM2MCA0MjAsIDQ2MCAzNjAgUyA1ODAgMzAwLCA2MTYgMzIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSI2NDAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxMGI2ZjAiLz48cmVjdCB4PSI3MjAiIHk9IjE2MCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI2NDAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmZjlmMWEiLz48cmVjdCB4PSI3MjAiIHk9IjI0NCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM3YTVjZmYiLz48cmVjdCB4PSI2NDAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3MjAiIHk9IjMyOCIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiMyMGMzYTYiLz48cmVjdCB4PSI2NDAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiNmMmM5NGMiLz48cmVjdCB4PSI3MjAiIHk9IjQxMiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9IiM5YWE0YjUiLz4KPHRleHQgeD0iNTAwIiB5PSI1OTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWI2Njc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BbmRyb2lkPC90ZXh0Pgo8L3N2Zz4=" alt="شاشة AV-7 مقاس 2DIN" loading="lazy" width="640" height="400" decoding="async">
+    <span class="badge-illus">صورة توضيحية</span>
+  </figure></a>
+    <div class="card-body">
+      
+      <h3 class="h5"><a href="ar/screens/av-7-double-din.html">شاشة AV-7 مقاس 2DIN</a></h3>
+      <ul class="chips">
+        <li>7″</li><li>2/32 GB</li><li>Android 13</li>
+        <li>CarPlay سلكي</li>
+        
+      </ul>
+      <div class="card-foot"><span class="price"><strong>450 ر.س</strong></span>
+        <a class="btn btn-ghost btn-sm" href="ar/screens/av-7-double-din.html">التفاصيل</a></div>
+    </div>
+  </article></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head"><h2>قبل وبعد التركيب</h2><a href="ar/gallery.html">معرض التركيبات</a></div>
+      <div class="grid grid-2">
+        <div><div class="ba" dir="ltr" data-ba>
+    <img class="ba-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="بعد — نيسان باترول 2010–2019" width="1200" height="675" loading="lazy">
+    <div class="ba-before"><img class="ba-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPHJlY3QgeD0iNDcwIiB5PSIzNDUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTkwIiByeD0iMTQiIGZpbGw9IiMwYTBiMGUiIHN0cm9rZT0iIzNhM2Y0OCIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxyZWN0IHg9IjUxMCIgeT0iMzY4IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iIzE2MzIzZCIvPgo8dGV4dCB4PSI2MDAiIHk9IjQwNiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzVmZDBlZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Rk0gOTguMTwvdGV4dD4KPGNpcmNsZSBjeD0iNTIwIiBjeT0iNDc4IiByPSIyNiIgZmlsbD0iIzJhMmUzNiIgc3Ryb2tlPSIjNDQ0YTU1IiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI0NzgiIHI9IjI2IiBmaWxsPSIjMmEyZTM2IiBzdHJva2U9IiM0NDRhNTUiIHN0cm9rZS13aWR0aD0iMyIvPgo8ZyBmaWxsPSIjMmEyZTM2Ij48cmVjdCB4PSI1NjAiIHk9IjQ2MiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiByeD0iMyIvPjxyZWN0IHg9IjU2MCIgeT0iNDg2IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIzIi8+PHJlY3QgeD0iNTg4IiB5PSI0NjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNCIgcng9IjMiLz48cmVjdCB4PSI1ODgiIHk9IjQ4NiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiByeD0iMyIvPjxyZWN0IHg9IjYxNiIgeT0iNDYyIiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIzIi8+PHJlY3QgeD0iNjE2IiB5PSI0ODYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNCIgcng9IjMiLz48L2c+Cjwvc3ZnPg==" alt="قبل — نيسان باترول 2010–2019" width="1200" height="675" loading="lazy"></div>
+    <span class="ba-label ba-label-l">قبل</span>
+    <span class="ba-label ba-label-r">بعد</span>
+    <span class="ba-handle" aria-hidden="true"></span>
+    <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="اسحب للمقارنة">
+    <span class="badge-illus">صورة توضيحية</span>
+  </div><p class="ba-caption"><a href="ar/car/nissan-patrol-2010-2019-le-se.html">نيسان باترول 2010–2019</a> · اسحب للمقارنة</p></div><div><div class="ba" dir="ltr" data-ba>
+    <img class="ba-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQzMCIgcng9IjMzMCIgcnk9IjE2MCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIzOTUiIHk9IjMyOCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSIyMzIiIHJ4PSIxNiIgZmlsbD0iIzA1MDYwOCIgc3Ryb2tlPSIjM2EzZjQ4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHJlY3QgeD0iNDA3IiB5PSIzNDAiIHdpZHRoPSIzODYiIGhlaWdodD0iMjA4IiByeD0iOSIgZmlsbD0iIzBkMTcyNiIvPgo8cmVjdCB4PSI0MDciIHk9IjM0MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDgiIHJ4PSI5IiBmaWxsPSIjZDllNmQzIi8+CjxwYXRoIGQ9Ik00MDcgNDcwIEMgNDgwIDQzMCwgNTIwIDUwMCwgNjAwIDQ1MiBTIDY5MCA0MDAsIDcwNyA0MjAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDA3IDQ3MCBDIDQ4MCA0MzAsIDUyMCA1MDAsIDYwMCA0NTIgUyA2OTAgNDAwLCA3MDcgNDIwIiBzdHJva2U9IiMxMGI2ZjAiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNNDcwIDM0MCBMNTIwIDU0OCBNNjAwIDM0MCBMNjQwIDU0OCBNNDA3IDQwMCBMNzA3IDM4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9Ii44Ii8+CjxjaXJjbGUgY3g9IjYwMCIgY3k9IjQ1MiIgcj0iMTEiIGZpbGw9IiMxMGI2ZjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxyZWN0IHg9IjcwNyIgeT0iMzQwIiB3aWR0aD0iODYiIGhlaWdodD0iMjA4IiBmaWxsPSIjMGIxMjIwIi8+CjxyZWN0IHg9IjcxNyIgeT0iMzU2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMTBiNmYwIi8+PHJlY3QgeD0iNzUzIiB5PSIzNTYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiMxZmE4NTUiLz48cmVjdCB4PSI3MTciIHk9IjQwMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2ZmOWYxYSIvPjxyZWN0IHg9Ijc1MyIgeT0iNDAwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjN2E1Y2ZmIi8+PHJlY3QgeD0iNzE3IiB5PSI0NDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZjRiNGIiLz48cmVjdCB4PSI3NTMiIHk9IjQ0NCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzIwYzNhNiIvPjxyZWN0IHg9IjcxNyIgeT0iNDg4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZjJjOTRjIi8+PHJlY3QgeD0iNzUzIiB5PSI0ODgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiM5YWE0YjUiLz48cmVjdCB4PSI0MjAiIHk9IjM1MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMGIxMjIwIiBvcGFjaXR5PSIuODUiLz4KPHRleHQgeD0iNDgwIiB5PSIzNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xMjo0NSAg4payIDMuMiBrbTwvdGV4dD4KCjwvc3ZnPg==" alt="بعد — نيسان صني 2012–2019" width="1200" height="675" loading="lazy">
+    <div class="ba-before"><img class="ba-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDY3NSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1Ij4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzlmYzdlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RmZWFmMyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImRhc2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTJmMzgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDE3MWMiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJjb24iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjI2MmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMTEzMTgiLz48L2xpbmVhckdyYWRpZW50PgogPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iLjUiIGN5PSIuNSIgcj0iLjYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEwYjZmMCIgc3RvcC1vcGFjaXR5PSIuMzUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMGI2ZjAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgMzAwIEMgMjAwIDI1MCwgNDAwIDI0MCwgNjAwIDI0MCBTIDEwMDAgMjUwLCAxMjAwIDMwMCBMMTIwMCAwIEwwIDBaIiBmaWxsPSIjYjlkNGVhIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNMCAzMzAgUTYwMCAyMTAgMTIwMCAzMzAgTDEyMDAgNjc1IEwwIDY3NVoiIGZpbGw9InVybCgjZGFzaCkiLz4KPHBhdGggZD0iTTAgMzMwIFE2MDAgMjEwIDEyMDAgMzMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYjQxNGMiIHN0cm9rZS13aWR0aD0iNCIvPgo8IS0tIHZlbnRzIC0tPgo8cmVjdCB4PSIxMjAiIHk9IjMzMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NiIgcng9IjEyIiBmaWxsPSIjMGMwZTEyIi8+PGcgc3Ryb2tlPSIjMmMzMTNhIiBzdHJva2Utd2lkdGg9IjQiPjxsaW5lIHgxPSIxMzAiIHkxPSIzMzgiIHgyPSIyODAiIHkyPSIzMzgiLz48bGluZSB4MT0iMTMwIiB5MT0iMzQ4IiB4Mj0iMjgwIiB5Mj0iMzQ4Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjM1OCIgeDI9IjI4MCIgeTI9IjM1OCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzNjgiIHgyPSIyODAiIHkyPSIzNjgiLz48L2c+CjxyZWN0IHg9IjkxMCIgeT0iMzMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ2IiByeD0iMTIiIGZpbGw9IiMwYzBlMTIiLz48ZyBzdHJva2U9IiMyYzMxM2EiIHN0cm9rZS13aWR0aD0iNCI+PGxpbmUgeDE9IjkyMCIgeTE9IjMzOCIgeDI9IjEwNzAiIHkyPSIzMzgiLz48bGluZSB4MT0iOTIwIiB5MT0iMzQ4IiB4Mj0iMTA3MCIgeTI9IjM0OCIvPjxsaW5lIHgxPSI5MjAiIHkxPSIzNTgiIHgyPSIxMDcwIiB5Mj0iMzU4Ii8+PGxpbmUgeDE9IjkyMCIgeTE9IjM2OCIgeDI9IjEwNzAiIHkyPSIzNjgiLz48L2c+CjwhLS0gc3RlZXJpbmcgd2hlZWwgLS0+CjxnIG9wYWNpdHk9Ii45NSI+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSIxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBiMGMwZiIgc3Ryb2tlLXdpZHRoPSIzOCIvPjxwYXRoIGQ9Ik05MCA2MTAgUTIzMCA1NDAgMzcwIDYxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGIwYzBmIiBzdHJva2Utd2lkdGg9IjQ0Ii8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iNjAwIiByPSI0NiIgZmlsbD0iIzFhMWQyMyIvPjwvZz4KPCEtLSBjZW50ZXIgY29uc29sZSAtLT4KPHBhdGggZD0iTTM4MCAzMDAgTDgyMCAzMDAgUTg0MCAzMDAgODQyIDMyMCBMODcwIDY3NSBMMzMwIDY3NSBMMzU4IDMyMCBRMzYwIDMwMCAzODAgMzAwWiIgZmlsbD0idXJsKCNjb24pIi8+CjxyZWN0IHg9IjQ0NSIgeT0iNTY1IiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwZTEwMTQiLz4KPGcgZmlsbD0iIzJiMzAzOCI+PGNpcmNsZSBjeD0iNDg1IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjU0MyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI2MDEiIGN5PSI1OTUiIHI9IjE3Ii8+PGNpcmNsZSBjeD0iNjU5IiBjeT0iNTk1IiByPSIxNyIvPjxjaXJjbGUgY3g9IjcxNyIgY3k9IjU5NSIgcj0iMTciLz48Y2lyY2xlIGN4PSI3NzUiIGN5PSI1OTUiIHI9IjE3Ii8+PC9nPgoKPHJlY3QgeD0iNDcwIiB5PSIzNDUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTkwIiByeD0iMTQiIGZpbGw9IiMwYTBiMGUiIHN0cm9rZT0iIzNhM2Y0OCIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxyZWN0IHg9IjUxMCIgeT0iMzY4IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iIzE2MzIzZCIvPgo8dGV4dCB4PSI2MDAiIHk9IjQwNiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzVmZDBlZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Rk0gOTguMTwvdGV4dD4KPGNpcmNsZSBjeD0iNTIwIiBjeT0iNDc4IiByPSIyNiIgZmlsbD0iIzJhMmUzNiIgc3Ryb2tlPSIjNDQ0YTU1IiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI0NzgiIHI9IjI2IiBmaWxsPSIjMmEyZTM2IiBzdHJva2U9IiM0NDRhNTUiIHN0cm9rZS13aWR0aD0iMyIvPgo8ZyBmaWxsPSIjMmEyZTM2Ij48cmVjdCB4PSI1NjAiIHk9IjQ2MiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiByeD0iMyIvPjxyZWN0IHg9IjU2MCIgeT0iNDg2IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIzIi8+PHJlY3QgeD0iNTg4IiB5PSI0NjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNCIgcng9IjMiLz48cmVjdCB4PSI1ODgiIHk9IjQ4NiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiByeD0iMyIvPjxyZWN0IHg9IjYxNiIgeT0iNDYyIiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIzIi8+PHJlY3QgeD0iNjE2IiB5PSI0ODYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNCIgcng9IjMiLz48L2c+Cjwvc3ZnPg==" alt="قبل — نيسان صني 2012–2019" width="1200" height="675" loading="lazy"></div>
+    <span class="ba-label ba-label-l">قبل</span>
+    <span class="ba-label ba-label-r">بعد</span>
+    <span class="ba-handle" aria-hidden="true"></span>
+    <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="اسحب للمقارنة">
+    <span class="badge-illus">صورة توضيحية</span>
+  </div><p class="ba-caption"><a href="ar/car/nissan-sunny-2012-2019-all-trims.html">نيسان صني 2012–2019</a> · اسحب للمقارنة</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>لماذا نحن</h2>
+      <div class="grid grid-3 features">
+        <div class="feature"><span class="feature-num">01</span><h3 class="h5">توافق موثّق</h3><p class="muted">لا نعرض أي شاشة كمتوافقة إلا بعد التحقق الفني من الإطار والضفيرة والأزرار.</p></div><div class="feature"><span class="feature-num">02</span><h3 class="h5">شاهد الفرق</h3><p class="muted">قارن شكل التابلوه قبل وبعد التركيب قبل أن تقرر.</p></div><div class="feature"><span class="feature-num">03</span><h3 class="h5">تركيب احترافي وضمان</h3><p class="muted">فنيون متخصصون وضمان واضح على الشاشة والتركيب.</p></div>
+      </div>
+      <ol class="steps">
+        <li><strong>1</strong>اختر سيارتك</li><li><strong>2</strong>قارن الشاشات المتوافقة</li><li><strong>3</strong>اطلب التركيب</li>
+      </ol>
+    </div>
+  </section>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoPartsStore","name":"أفلون لشاشات السيارات","url":"https://avlon.example/ar/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://avlon.example/ar/","potentialAction":{"@type":"SearchAction","target":"https://avlon.example/ar/find?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="logo" href="ar/index.html"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="8" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 24l6-8 5 6 4-4 5 6" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>أفلون لشاشات السيارات</span></a>
+      <p class="muted">نختص بالشاشات الخارجية التي تُركّب بعد تصنيع السيارة، ولا نبيع الشاشات الأصلية من المصنع.</p>
+    </div>
+    <div>
+      <h2 class="h6">القائمة</h2>
+      <ul class="links"><li><a href="ar/brands.html">ماركات السيارات</a></li><li><a href="ar/find.html">ابحث عن شاشتك</a></li><li><a href="ar/screens.html">أنواع الشاشات</a></li><li><a href="ar/gallery.html">معرض التركيبات</a></li><li><a href="ar/about.html">من نحن</a></li><li><a href="ar/contact.html">اتصل بنا</a></li>
+        <li><a href="ar/faq.html">الأسئلة الشائعة</a></li><li><a href="ar/articles.html">المقالات</a></li></ul>
+    </div>
+    <div>
+      <h2 class="h6">بيانات التواصل</h2>
+      <ul class="links">
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy muted">© 2026 أفلون لشاشات السيارات — جميع الحقوق محفوظة</div>
+</footer>
+
+<script>(() => {
+  'use strict';
+  const lang = document.documentElement.lang === 'en' ? 'en' : 'ar';
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+  // Mobile nav
+  const toggle = $('.nav-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const nav = $('#main-nav');
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // Before / after slider (range input drives a CSS variable; works with mouse, touch and keyboard)
+  $$('[data-ba]').forEach((ba) => {
+    const range = $('.ba-range', ba);
+    const set = (v) => ba.style.setProperty('--pos', `${v}%`);
+    range.addEventListener('input', () => set(range.value));
+    set(range.value);
+  });
+
+  // Finder: cascading brand → model → year
+  $$('[data-finder]').forEach((form) => {
+    const brand = $('[data-f=brand]', form);
+    const model = $('[data-f=model]', form);
+    const year = $('[data-f=year]', form);
+    const fill = (sel, items, placeholder) => {
+      sel.innerHTML = '';
+      sel.append(new Option(placeholder, ''));
+      items.forEach((it) => sel.append(typeof it === 'object' ? new Option(it.name, it.slug) : new Option(String(it), String(it))));
+      sel.disabled = items.length === 0;
+    };
+    const ph = (s) => s.options[0]?.textContent || '';
+    brand.addEventListener('change', async () => {
+      fill(year, [], ph(year));
+      if (!brand.value) return fill(model, [], ph(model));
+      const res = await fetch(`/api/models?brand=${encodeURIComponent(brand.value)}&lang=${lang}`);
+      fill(model, await res.json(), ph(model));
+      model.focus();
+    });
+    model.addEventListener('change', async () => {
+      if (!model.value) return fill(year, [], ph(year));
+      const res = await fetch(`/api/years?brand=${encodeURIComponent(brand.value)}&model=${encodeURIComponent(model.value)}`);
+      const years = await res.json();
+      fill(year, years, ph(year));
+      if (!years.length) form.submit(); // let the server show the "not listed yet" page
+      else year.focus();
+    });
+    year.addEventListener('change', () => { if (year.value) form.submit(); });
+  });
+
+  // Client-side list filter (brands page)
+  $$('[data-filter]').forEach((input) => {
+    const items = $$(input.dataset.filter);
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      items.forEach((li) => { li.hidden = q && !li.dataset.text.toLowerCase().includes(q); });
+    });
+  });
+
+  // Lightbox
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-lightbox]');
+    if (!a) return;
+    e.preventDefault();
+    const box = document.createElement('div');
+    box.className = 'lb';
+    box.setAttribute('role', 'dialog');
+    const img = new Image();
+    img.src = a.getAttribute('href');
+    img.alt = $('img', a)?.alt || '';
+    box.append(img);
+    const close = () => { box.remove(); document.removeEventListener('keydown', onKey); };
+    const onKey = (ev) => { if (ev.key === 'Escape') close(); };
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', onKey);
+    document.body.append(box);
+  });
+
+  // Order form
+  const MSG = {
+    ar: { required: 'هذا الحقل مطلوب', phone: 'رقم جوال غير صحيح', invalid: 'قيمة غير صحيحة', photo: 'الصورة غير صالحة أو كبيرة جداً', network: 'تعذر الاتصال، حاول مرة أخرى.' },
+    en: { required: 'This field is required', phone: 'Invalid mobile number', invalid: 'Invalid value', photo: 'Image is invalid or too large', network: 'Connection failed, please try again.' },
+  }[lang];
+
+  async function shrinkImage(file) {
+    if (file.size < 1.5 * 1024 * 1024) return readAsDataUrl(file);
+    const bmp = await createImageBitmap(file).catch(() => null);
+    if (!bmp) return readAsDataUrl(file);
+    const scale = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(bmp.width * scale);
+    c.height = Math.round(bmp.height * scale);
+    c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+    return c.toDataURL('image/jpeg', 0.85);
+  }
+  const readAsDataUrl = (file) => new Promise((ok, fail) => { const r = new FileReader(); r.onload = () => ok(r.result); r.onerror = fail; r.readAsDataURL(file); });
+
+  $$('[data-order]').forEach((form) => {
+    const msg = $('.form-msg', form);
+    const btn = $('button[type=submit]', form);
+    const showErrors = (errors) => {
+      $$('label', form).forEach((l) => { l.classList.remove('invalid'); const em = $('.err', l); if (em) em.textContent = ''; });
+      Object.entries(errors).forEach(([name, code]) => {
+        const field = form.elements[name];
+        const label = field && (field.closest ? field.closest('label') : null);
+        if (!label) return;
+        label.classList.add('invalid');
+        const em = $('.err', label);
+        if (em) em.textContent = MSG[code] || (code === 'required' ? MSG.required : name === 'phone' ? MSG.phone : name === 'photo' ? MSG.photo : MSG.invalid);
+      });
+      const first = Object.keys(errors)[0];
+      if (first && form.elements[first]?.focus) form.elements[first].focus();
+    };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.hidden = true;
+      const fd = new FormData(form);
+      const data = Object.fromEntries([...fd.entries()].filter(([k]) => k !== 'photo'));
+      // Light client checks (server validates everything again)
+      const errors = {};
+      $$('[required]', form).forEach((f) => { if (!String(f.value).trim()) errors[f.name] = 'required'; });
+      if (data.phone && !/^\+?[\d٠-٩۰-۹\s\-()]{8,20}$/.test(data.phone)) errors.phone = 'phone';
+      if (Object.keys(errors).length) return showErrors(errors);
+      showErrors({});
+      const file = form.elements.photo?.files?.[0];
+      btn.disabled = true;
+      const label = btn.textContent;
+      btn.textContent = btn.dataset.sending;
+      try {
+        if (file) {
+          if (!/^image\/(jpeg|png|webp)$/.test(file.type)) { showErrors({ photo: 'photo' }); return; }
+          data.photo = await shrinkImage(file);
+        }
+        const res = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        const out = await res.json().catch(() => ({}));
+        if (res.status === 201) {
+          form.hidden = true;
+          const ok = form.nextElementSibling;
+          ok.hidden = false;
+          $('.order-ref', ok).textContent = out.ref;
+          if (out.whatsapp) $$('.wa-follow', ok).forEach((el) => { el.hidden = false; if (el.tagName === 'A') el.href = out.whatsapp; });
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        if (out.errors) showErrors(Object.fromEntries(Object.entries(out.errors).map(([k, v]) => [k, v === 'required' ? 'required' : k === 'phone' ? 'phone' : k === 'photo' ? 'photo' : 'invalid'])));
+        msg.textContent = res.status === 429 ? (lang === 'ar' ? 'طلبات كثيرة، حاول لاحقاً.' : 'Too many requests, try later.') : form.dataset.error || (lang === 'ar' ? 'تعذر إرسال الطلب. راجع الحقول وحاول مرة أخرى.' : 'Could not send. Check the fields and try again.');
+        msg.hidden = false;
+      } catch {
+        msg.textContent = MSG.network;
+        msg.hidden = false;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = label;
+      }
+    });
+  });
+})();
+</script>
+<script>window.__ROOT=".";</script><script>window.__FINDER={"toyota":{"camry":{"ar":"كامري","en":"Camry","vehicles":[{"slug":"toyota-camry-2018-2024-standard-trim","from":2018,"to":2024},{"slug":"toyota-camry-2018-2024-top-trim-premium-audio","from":2018,"to":2024},{"slug":"toyota-camry-2012-2017-all-trims","from":2012,"to":2017}],"years":[2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012]},"corolla":{"ar":"كورولا","en":"Corolla","vehicles":[{"slug":"toyota-corolla-2014-2018-all-trims","from":2014,"to":2018}],"years":[2018,2017,2016,2015,2014]},"land-cruiser":{"ar":"لاندكروزر","en":"Land Cruiser","vehicles":[{"slug":"toyota-land-cruiser-2016-2021-gx-exr","from":2016,"to":2021},{"slug":"toyota-land-cruiser-2016-2021-vxr-vx","from":2016,"to":2021}],"years":[2021,2020,2019,2018,2017,2016]},"hilux":{"ar":"هايلكس","en":"Hilux","vehicles":[{"slug":"toyota-hilux-2016-2023-all-trims","from":2016,"to":2023}],"years":[2023,2022,2021,2020,2019,2018,2017,2016]}},"hyundai":{"elantra":{"ar":"إلنترا","en":"Elantra","vehicles":[{"slug":"hyundai-elantra-2016-2020-standard-trim","from":2016,"to":2020},{"slug":"hyundai-elantra-2021-2023-all-trims","from":2021,"to":2023}],"years":[2023,2022,2021,2020,2019,2018,2017,2016]},"accent":{"ar":"أكسنت","en":"Accent","vehicles":[{"slug":"hyundai-accent-2018-2022-all-trims","from":2018,"to":2022}],"years":[2022,2021,2020,2019,2018]}},"kia":{"sportage":{"ar":"سبورتاج","en":"Sportage","vehicles":[{"slug":"kia-sportage-2016-2021-all-trims","from":2016,"to":2021}],"years":[2021,2020,2019,2018,2017,2016]},"cerato":{"ar":"سيراتو","en":"Cerato","vehicles":[{"slug":"kia-cerato-2019-2023-all-trims","from":2019,"to":2023}],"years":[2023,2022,2021,2020,2019]}},"nissan":{"sunny":{"ar":"صني","en":"Sunny","vehicles":[{"slug":"nissan-sunny-2012-2019-all-trims","from":2012,"to":2019}],"years":[2019,2018,2017,2016,2015,2014,2013,2012]},"patrol":{"ar":"باترول","en":"Patrol","vehicles":[{"slug":"nissan-patrol-2010-2019-le-se","from":2010,"to":2019}],"years":[2019,2018,2017,2016,2015,2014,2013,2012,2011,2010]}},"chevrolet":{"tahoe":{"ar":"تاهو","en":"Tahoe","vehicles":[{"slug":"chevrolet-tahoe-2015-2020-all-trims","from":2015,"to":2020}],"years":[2020,2019,2018,2017,2016,2015]}},"mitsubishi":{"pajero":{"ar":"باجيرو","en":"Pajero","vehicles":[{"slug":"mitsubishi-pajero-2007-2021-all-trims","from":2007,"to":2021}],"years":[2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007]}},"honda":{"accord":{"ar":"أكورد","en":"Accord","vehicles":[{"slug":"honda-accord-2013-2017-all-trims","from":2013,"to":2017}],"years":[2017,2016,2015,2014,2013]}},"mg":{"zs":{"ar":"ZS","en":"ZS","vehicles":[{"slug":"mg-zs-2018-2022-all-trims","from":2018,"to":2022}],"years":[2022,2021,2020,2019,2018]}}};</script><script>(() => {
+  const lang = document.documentElement.lang === 'en' ? 'en' : 'ar';
+  const root = window.__ROOT || '.';
+  const F = window.__FINDER || {};
+  document.querySelectorAll('[data-finder-static]').forEach((form) => {
+    const [brand, model, year] = ['brand', 'model', 'year'].map((n) => form.querySelector(`[data-f=${n}]`));
+    const fill = (sel, items) => { const ph = sel.options[0].textContent; sel.innerHTML = ''; sel.append(new Option(ph, '')); items.forEach(([v, t]) => sel.append(new Option(t, v))); sel.disabled = !items.length; };
+    const go = () => {
+      const m = F[brand.value]?.[model.value];
+      if (!m) return;
+      const hits = m.vehicles.filter((v) => v.from <= +year.value && (v.to || 9999) >= +year.value);
+      location.href = hits.length === 1 ? `${root}/${lang}/car/${hits[0].slug}.html` : `${root}/${lang}/brands/${brand.value}/${model.value}.html`;
+    };
+    brand.addEventListener('change', () => { fill(year, []); fill(model, Object.entries(F[brand.value] || {}).map(([s, m]) => [s, m[lang]])); });
+    model.addEventListener('change', () => fill(year, (F[brand.value]?.[model.value]?.years || []).map((y) => [y, y])));
+    year.addEventListener('change', () => year.value && go());
+    form.addEventListener('submit', (e) => { e.preventDefault(); if (year.value) go(); });
+  });
+  document.querySelectorAll('[data-order-static]').forEach((form) => {
+    const msg = form.querySelector('.form-msg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      msg.style.background = '#e3f6fd'; msg.style.color = '#0a5f82';
+      msg.textContent = lang === 'ar' ? 'هذه معاينة ثابتة، لذلك لم يُرسَل الطلب. في الموقع المنشور يُحفظ الطلب في لوحة التحكم ويحصل العميل على رقم طلب ورابط واتساب.' : 'This is a static preview, so nothing was sent. On the live site the request is saved to the admin dashboard and the customer gets a reference number and a WhatsApp link.';
+      msg.hidden = false;
+    });
+  });
+})();
+</script></body>
+</html>
